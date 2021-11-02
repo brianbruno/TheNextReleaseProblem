@@ -1,0 +1,17 @@
+[
+    {
+        "name": "Tanqueray",
+        "importance": 50,
+        "requirements": ["req6"]
+    },
+    {
+        "name": "Bombay",
+        "importance": 60,
+        "requirements": ["req6", "req7"]
+    },
+    {
+        "name": "Absolut",
+        "importance": 70,
+        "requirements": ["req5"]
+    }
+]

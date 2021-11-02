@@ -1,0 +1,37 @@
+{
+    "req1": {
+        "name": "Melhoria 1",
+        "cost": 10,
+        "parents": []
+    },
+    "req2": {
+        "name": "Melhoria 2",
+        "cost": 6,
+        "parents": []
+    },
+    "req3": {
+        "name": "Melhoria 3",
+        "cost": 7,
+        "parents": ["req1"]
+    },
+    "req4": {
+        "name": "Melhoria 4",
+        "cost": 1,
+        "parents": ["req1"]
+    },
+    "req5": {
+        "name": "Melhoria 5",
+        "cost": 4,
+        "parents": ["req2"]
+    },
+    "req6": {
+        "name": "Melhoria 6",
+        "cost": 6,
+        "parents": ["req3"]
+    },
+    "req7": {
+        "name": "Melhoria 7",
+        "cost": 1,
+        "parents": ["req4", "req5"]
+    }
+}
