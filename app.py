@@ -27,10 +27,12 @@ def is_required(req_key, arr_req):
 
     if req_key in arr_req:
         required = True
+
+    if not required:
     
-    for req in requirement["parents"]:
-        if not required:
-            required = is_required(req, arr_req)
+        for req in requirement["parents"]:
+            if not required:
+                required = is_required(req, arr_req)
     
     return required
 
@@ -47,12 +49,12 @@ def get_bound(req):
 
 def analyze_customers(req):
 
-    requirements_text = "| # Customer: {name} # Importance: {importance} # Match All Requirements: {match}"
+    requirements_text = "| # Customer: {name} # Importance: {importance} # Match Requirements: {match}"
 
     for customer in customers:
         match = False
 
-        if len(customer["requirements"]) == 1 and customer["requirements"][0] == req:
+        if req in customer["requirements"]:
             match = True
 
         print(requirements_text.format(name = customer["name"], 
@@ -61,7 +63,7 @@ def analyze_customers(req):
     
 
 def analyze_requirements():
-    requirements_text = "|   COD: {cod} NAME: {name} COST: {cost} BOUND: {bound}  "
+    requirements_text = "|   COD: {cod} NAME: {name} COST: {cost} IMPORTANCE: {bound}  "
     print("____________________________________________________________")
 
     for req in all_requirements.keys():
